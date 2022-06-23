@@ -1,3 +1,19 @@
+### READ
+
+Getting this to build for deno is something special.
+
+ - Build with the modified tsc file
+ - `rm -rf dist/* && npx tsc -p ts-deno.json`
+ - Bundle with rollup
+ - cd dist && npx rollup -c rollup.config.js
+ - remove module weirdness in the bundled file
+//module.exports = exports = Ajv;
+//Object.defineProperty(exports, "__esModule", { value: true });
+ - move this to the es-tool repo in _shared
+
+###
+
+
 <img align="right" alt="Ajv logo" width="160" src="https://ajv.js.org/img/ajv.svg">
 
 &nbsp;

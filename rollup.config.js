@@ -14,6 +14,16 @@ function createBundleConfig(sourceFile, outFile, globalName) {
         name: globalName,
       },
       {
+        file: `./bundle/${outFile}.esm.bundle.js`,
+        format: "es",
+        name: globalName,
+      },
+      {
+        file: `./bundle/${outFile}.cjs.bundle.js`,
+        format: "cjs",
+        name: globalName,
+      },
+      {
         file: `./bundle/${outFile}.min.js`,
         format: "umd",
         name: globalName,
